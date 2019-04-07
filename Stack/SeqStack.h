@@ -29,3 +29,4 @@ int GetSize_SeqStack(SeqStack stack);
 void Destroy_SeqStack(SeqStack stack);
 // TODO: 添加要在此处预编译的标头
 
+int Print_SeqStack(SeqStack stack, void(*PrintData)(void*));

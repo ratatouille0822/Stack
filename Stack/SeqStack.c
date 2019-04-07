@@ -32,7 +32,7 @@ int  Pop_SeqStack(SeqStack stack)
 	}
 	SEQSTACK* temp = (SEQSTACK*)stack;
 	temp->array[temp->size - 1] = NULL;
-	temp->size - 1;
+	temp->size -- ;
 	return 0;
 }
 //获取栈顶
@@ -41,11 +41,11 @@ void * GetTop_SeqStack(SeqStack stack)
 	if (NULL == stack)
 	{
 		perror("Empty ---------200\n");
-		return -1;
+		return NULL;
 	}
 	SEQSTACK* temp = (SEQSTACK*)stack;
 
-	return (void*)&(temp->array[temp->size - 1]);
+	return (void*)(temp->array[temp->size - 1]);
 	
 }
 //栈是否为空
@@ -84,8 +84,8 @@ int Print_SeqStack(SeqStack stack, void(*PrintData)(void*))
 
 	while (temp->size != 0)
 	{
-		GetTop_SeqStack(temp);
-		PrintData(temp->array);
+		void* p = GetTop_SeqStack(temp);
+		PrintData(p);
 		Pop_SeqStack(temp);
 	}
 
@@ -96,7 +96,7 @@ void Destroy_SeqStack(SeqStack stack)
 {
 	free(stack);
 }
-// TODO: 添加要在此处预编译的标头
+// TODO: 添加要在此处预编译的
 
 
 
