@@ -15,16 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
+    <ClCompile Include="Stack.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SeqStack.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pch.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Stack.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
+    <ClInclude Include="SeqStack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
